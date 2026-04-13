@@ -1,0 +1,49 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="ERD Library" id="0">
+    <mxGraphModel dx="1281" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="users" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="USERS&#xa;_user_id_&#xa;name&#xa;email&#xa;role&#xa;status" vertex="1">
+          <mxGeometry height="120" width="160" x="50" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="resources" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="RESOURCES&#xa;_resource_id_&#xa;title&#xa;type" vertex="1">
+          <mxGeometry height="100" width="160" x="640" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pb" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="PHYSICAL_BOOK&#xa;_resource_id_&#xa;location&#xa;quantity" vertex="1">
+          <mxGeometry height="100" width="160" x="520" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ebook" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="EBOOK&#xa;_resource_id_&#xa;file_url" vertex="1">
+          <mxGeometry height="80" width="140" x="700" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="paper" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="SCIENTIFIC_PAPER&#xa;_resource_id_&#xa;doi&#xa;price" vertex="1">
+          <mxGeometry height="100" width="160" x="860" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="reviews" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="REVIEWS&#xa;_review_id_&#xa;content&#xa;rating&#xa;created_at&#xa;user_id (nullable)&#xa;resource_id" vertex="1">
+          <mxGeometry height="140" width="200" x="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wallets" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="WALLETS&#xa;_transaction_id_&#xa;amount&#xa;transaction_type&#xa;created_at" vertex="1">
+          <mxGeometry height="120" width="180" x="50" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="users" style="endArrow=block;" target="wallets">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="users" style="endArrow=block;" target="reviews">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="resources" style="endArrow=block;" target="reviews">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="resources" style="endArrow=block;" target="pb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="resources" style="endArrow=block;" target="ebook">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="resources" style="endArrow=block;" target="paper">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
